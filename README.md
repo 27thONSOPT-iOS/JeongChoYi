@@ -1,4 +1,4 @@
-# Shout Our Passion Together! 27nd
+# Shout Our Passion Together! 27th
 
 <img src="./img/main.jpg" />
 
