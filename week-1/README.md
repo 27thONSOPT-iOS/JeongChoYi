@@ -48,7 +48,7 @@
 
 View 관리 - ViewController
 
-<img style="float: left;" src="./img/4.png" width=500>**View의 상태 변화 감지 메서드**
+<img align=left src="./img/4.png" width=500>**View의 상태 변화 감지 메서드**
 
 * viewWillAppear
   - 뷰가 계층에 추가되고 화면이 표시되기 직전에 호출되는 메서드
@@ -62,6 +62,7 @@ View 관리 - ViewController
   - 뷰가 생성된 뒤 발생한 변화를 이전 상태로 되돌리기 좋은 시점
 
 - viewDidDisappear
+
   - 뷰가 계층에서 사라진 후 호출되는 메서드
   - 시간이 오래 걸리는 작업은 하지 않는 것이 좋음
 
@@ -79,30 +80,50 @@ View 관리 - ViewController
 
 ### Optional
 
-Int != Int?
+* Int != Int?
 
-정수형 변수랑 ==빼고는 수학연산 안 됨 nil일때는 대입도 안 됨
+* 정수형 변수랑 ==빼고는 수학연산 안 됨 nil일때는 대입도 안 됨
 
-옵셔널바인딩 : if-let, if-var(이 변수는 if문 안에서만 사용 가능)
+* 옵셔널바인딩 : if-let, if-var(이 변수는 if문 안에서만 사용 가능)
 
-​						guard-let, guard-var (guard문은 종료 명령문 써야 됨)
-​						guard문이 if문에 비해 코드 블록 범위를 넓힐 수 있다
-
-​						예외사항 빠른 처리 원하면 guard문 사용
+* guard-let, guard-var (guard문은 종료 명령문 써야 됨)
+  * guard문이 if문에 비해 코드 블록 범위를 넓힐 수 있다
+  * 예외사항 빠른 처리 원하면 guard문 사용
 
 ### Closure
 
+* {} 코드 블럭
+* 인자로 전달, 변수나 상수로 저장/전달, 함수에서 반환 가능
+
+```swift
+{ (Parameter) -> ReturnType in
+ logic
+}
+
+//ex-1
+func doSomething(number: Int?) -> Int {
+  guard let unwrappedVar1 = number else {
+    return -1
+  }
+  return unwrappedVar1
+}
+
+//ex-2
+var optVar1: Int? = nil
+var doSomething2 = { (number: Int?) -> Int in
+	guard let unwrappedVar1 = number else {
+    return -1
+  }
+  return unwrappedVar1
+}
+doSomething2(optVar1) // -1
+
+//ex-3
+var doSomething3: (Int?) -> Int
+doSomething3 = doSomething2
 
 
-### Show
-
-네비게이션일땐 push 자동으로 하고
-
-아니면 present modally 자동으로 함
-
-
-
-
+```
 
 
 
