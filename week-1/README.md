@@ -1,6 +1,6 @@
 # 1주차 세미나
 
-💾 [실습 프로젝트](https://github.com/27thONSOPT-iOS/JeongChoYi/tree/master/week-1/project-file)
+💾 [실습 프로젝트](https://github.com/27thONSOPT-iOS/JeongChoYi/tree/master/week-1/seminar)
 
 앞부분은 개인적으로 공부할 때 알아보기 
 
